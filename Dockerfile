@@ -16,13 +16,13 @@ RUN unzip /tmp/xray.zip -d /usr/local/bin/ \
 RUN mkdir -p /www
 
 # 把三个文件复制进镜像（注意：这些文件在 Windows 上可能带 CRLF）
-COPY config.json /etc/xray/config.json
+COPY config.json.template /etc/xray/config.json.template
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY entrypoint.sh /entrypoint.sh
 
 # 设置执行权限，并在构建时清除 CRLF（去掉 '\r'）
 RUN chmod +x /entrypoint.sh \
-    && sed -i 's/\r$//' /entrypoint.sh /etc/nginx/nginx.conf /etc/xray/config.json \
+    && sed -i 's/\r$//' /entrypoint.sh /etc/nginx/nginx.conf \
     && printf '%s\n' "配備が完了しました" > /www/index.html
 
 # 安装 cloudflared
