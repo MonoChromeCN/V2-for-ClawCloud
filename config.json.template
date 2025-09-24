@@ -7,7 +7,7 @@
       "settings": {
         "clients": [
           {
-            "id": "c2ce3368-41e4-485c-b159-34cc6ed020ac",
+            "id": "${UUID}",
             "alterId": 0
           }
         ],
@@ -16,7 +16,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ws"
+          "path": "/1145141919810"
         }
       },
       "sockopt": { "udp": true }
@@ -28,7 +28,7 @@
       "settings": {
         "clients": [
           {
-            "id": "c2ce3368-41e4-485c-b159-34cc6ed020ac",
+            "id": "${UUID}",
             "alterId": 0
           }
         ],
@@ -37,7 +37,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ws"
+          "path": "/1145141919810"
         }
       },
       "sockopt": { "udp": true }
