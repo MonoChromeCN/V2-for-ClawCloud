@@ -1,0 +1,49 @@
+{
+  "inbounds": [
+    {
+      "port": 10000,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "c2ce3368-41e4-485c-b159-34cc6ed020ac",
+            "alterId": 0
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ws"
+        }
+      },
+      "sockopt": { "udp": true }
+    },
+    {
+      "port": 12345,
+      "listen": "127.0.0.1",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "c2ce3368-41e4-485c-b159-34cc6ed020ac",
+            "alterId": 0
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/ws"
+        }
+      },
+      "sockopt": { "udp": true }
+    }
+  ],
+  "outbounds": [
+    { "protocol": "freedom" }
+  ]
+}
