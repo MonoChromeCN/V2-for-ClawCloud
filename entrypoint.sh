@@ -15,7 +15,8 @@ sed "s/\${UUID}/$UUID/g" /etc/xray/config.json.template > /etc/xray/config.json
 nginx -g 'daemon off;' &
 
 # 启动 cloudflared (使用环境变量)
-/usr/local/bin/cloudflared tunnel --no-autoupdate run --token "$TUNNEL_TOKEN" &
+/usr/local/bin/cloudflared tunnel run --token "$TUNNEL_TOKEN" &
 
 # 保持容器前台运行
 wait -n
+
