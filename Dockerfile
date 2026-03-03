@@ -25,6 +25,9 @@ RUN chmod +x /entrypoint.sh \
     && sed -i 's/\r$//' /entrypoint.sh /etc/nginx/nginx.conf \
     && printf '%s\n' "配備が完了しました" > /www/index.html
 
+ENV LANG=C.UTF-8 \
+LC_ALL=C.UTF-8
+
 # 安装 cloudflared
 ADD https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 /usr/local/bin/cloudflared
 RUN chmod +x /usr/local/bin/cloudflared
@@ -33,3 +36,4 @@ EXPOSE 80
 
 # exec 形式启动脚本（脚本会以 exec 启动 nginx，保证信号传递）
 CMD ["/entrypoint.sh"]
+
