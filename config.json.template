@@ -20,27 +20,6 @@
         }
       },
       "sockopt": { "udp": true }
-    },
-    {
-      "port": 12345,
-      "listen": "127.0.0.1",
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "${UUID}",
-            "alterId": 0
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/1145141919810"
-        }
-      },
-      "sockopt": { "udp": true }
     }
   ],
   "outbounds": [
